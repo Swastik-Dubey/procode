@@ -1,0 +1,2099 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>(() => {
+            let theme = localStorage.getItem("theme");
+            document.querySelector("html").dataset.theme = theme ? theme : "light";
+        })();</script>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <link media="print"
+        href="https://www.pythontutorial.net/wp-content/cache/autoptimize/css/autoptimize_b5360d8fe28af112b0854d10ad4c9c05.css"
+        rel="stylesheet" />
+    <style id="aoatfcss" media="all">
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        main {
+            display: block
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: .67em 0
+        }
+
+        a {
+            background-color: transparent
+        }
+
+        img {
+            border-style: none
+        }
+
+        button,
+        input,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0
+        }
+
+        button,
+        input {
+            overflow: visible
+        }
+
+        button {
+            text-transform: none
+        }
+
+        [type=button],
+        [type=submit],
+        button {
+            -webkit-appearance: button
+        }
+
+        [type=button]::-moz-focus-inner,
+        [type=submit]::-moz-focus-inner,
+        button::-moz-focus-inner {
+            border-style: none;
+            padding: 0
+        }
+
+        [type=button]:-moz-focusring,
+        [type=submit]:-moz-focusring,
+        button:-moz-focusring {
+            outline: 1px dotted ButtonText
+        }
+
+        textarea {
+            overflow: auto
+        }
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+
+        [type=search]::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        .site-header {
+            border-bottom: 1px solid var(--header-border-color)
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--logo-url) no-repeat center center;
+            height: var(--logo-height);
+            width: var(--logo-width)
+        }
+
+        .header-wrapper {
+            position: relative;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0
+        }
+
+        .site-branding {
+            flex-shrink: 0;
+            flex-grow: 0;
+            padding: 0 .5rem
+        }
+
+        .site-branding a {
+            display: block;
+            padding: .5rem
+        }
+
+        .site-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .site-navigation a {
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            font-size: .8rem;
+            font-weight: 500;
+            color: var(--menu-color);
+            padding: .5rem
+        }
+
+        .site-navigation a:visited {
+            color: var(--menu-color)
+        }
+
+        .menu-toggle {
+            display: block;
+            background: var(--hamburger-icon) no-repeat center center;
+            height: 50px;
+            width: 50px;
+            outline: 0;
+            border: none
+        }
+
+        .site-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            z-index: -1;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-100%);
+            padding: 0;
+            margin: 0
+        }
+
+        .site-menu li {
+            list-style: none;
+            border-bottom: solid 1px var(--border-color);
+            padding: .5rem 0
+        }
+
+        .site-menu li:first-child {
+            border-top: solid 1px var(--border-color)
+        }
+
+        .site-menu a {
+            display: block
+        }
+
+        .sub-menu {
+            display: none
+        }
+
+        .menu-item-has-children a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .menu-item-has-children>a:after {
+            content: "";
+            -webkit-mask: var(--down-icon);
+            mask: var(--down-icon);
+            mask-size: cover;
+            -webkit-mask-size: cover;
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            background-color: var(--text-color);
+            margin-left: 5px
+        }
+
+        .menu-item-has-children .sub-menu li {
+            border: none
+        }
+
+        .menu-item-has-children .sub-menu a {
+            font-size: .85rem;
+            margin-left: 1rem;
+            text-transform: none
+        }
+
+        svg {
+            fill: currentColor
+        }
+
+        .switch-theme {
+            padding: .25rem 1rem;
+            border-radius: 1rem;
+            width: 20px;
+            height: 20px
+        }
+
+        .switch-theme svg {
+            margin-right: .25rem
+        }
+
+        html .light-mode-icon {
+            display: none
+        }
+
+        html .dark-mode-icon {
+            display: inline
+        }
+
+        @media (min-width:768px) {
+            .menu-item-has-children .sub-menu a {
+                margin-left: 0;
+                font-size: .8rem
+            }
+
+            .menu-toggle {
+                display: none
+            }
+
+            .site-branding a {
+                padding: 0
+            }
+
+            .site-menu {
+                opacity: 1;
+                visibility: visible;
+                position: relative;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                transform: translateY(0);
+                display: flex;
+                justify-content: flex-end;
+                align-items: center
+            }
+
+            .site-navigation a {
+                padding: 1.25rem .75rem
+            }
+
+            .site-menu li {
+                padding: 0
+            }
+
+            .sub-menu a {
+                padding: .65rem
+            }
+
+            .menu-item-has-children {
+                position: relative
+            }
+
+            .site-menu .sub-menu {
+                display: none;
+                background-color: var(--submenu-bg-color);
+                border: solid 1px var(--border-color);
+                border-radius: .25rem;
+                min-width: 200px
+            }
+
+            .site-menu>.menu-item-has-children>a:after {
+                content: "";
+                -webkit-mask: var(--down-icon);
+                mask: var(--down-icon);
+                mask-size: cover;
+                -webkit-mask-size: cover;
+                display: inline-block;
+                height: 1rem;
+                width: 1rem;
+                background-color: var(--text-color)
+            }
+
+            .site-menu>.menu-item {
+                border-bottom: solid 1px transparent
+            }
+
+            .site-menu>.current-menu-item,
+            .site-menu>.current-menu-parent {
+                border-bottom: solid 1px var(--current-color)
+            }
+
+            .site-menu li:first-child,
+            .site-menu li:last-child {
+                border-top: none
+            }
+        }
+
+        .entry-content .wp-block-group>div {
+            background-color: var(--body-bg-color);
+            border: solid 1px var(--section-border-color);
+            border-radius: 15px;
+            box-shadow: 0 3px 0 rgba(84, 94, 111, .2);
+            padding: 20px;
+            margin: 0;
+            margin-bottom: 30px
+        }
+
+        .entry-content .wp-block-group>div ul {
+            margin: 0
+        }
+
+        .entry-content .wp-block-group>div h2 {
+            padding-left: 0;
+            margin: 0;
+            margin-bottom: 10px
+        }
+
+        .search-form {
+            margin: 1rem 0
+        }
+
+        .page-header {
+            padding: 0 .5rem;
+            margin-bottom: 1.5rem
+        }
+
+        .alignright {
+            float: right;
+            margin: .5em 0 .5em 1em
+        }
+
+        .wp-block-code code::-webkit-scrollbar {
+            width: 11px
+        }
+
+        .wp-block-code code {
+            scrollbar-width: thin;
+            scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-bg-color)
+        }
+
+        .wp-block-code code::-webkit-scrollbar-track {
+            background: var(--scrollbar-bg-color)
+        }
+
+        .wp-block-code code::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-thumb-color);
+            border-radius: 6px;
+            border: 3px solid var(--scrollbar-bg-color)
+        }
+
+        .page-search-label {
+            display: block;
+            margin-bottom: 1rem
+        }
+
+        .page-header .page-title {
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+            font-size: 3rem;
+            text-align: center
+        }
+
+        :root {
+            color-scheme: light;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            --font-family-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+            --body-bg-color: #fff;
+            --text-color: #212529;
+            --primary-color: #0052ea;
+            --header-bg-color: #fff;
+            --header-border-color: #e7ebed;
+            --heading-color: #374151;
+            --link-color: #0052ea;
+            --link-color-hover: #0052ea;
+            --title-color: #0052ea;
+            --code-badge-color: #fff;
+            --footer-bg-color: #f7faff;
+            --footer-color: #212529;
+            --footer-link-color: #0052ea;
+            --footer-link-color-hover: #377dff;
+            --ads-label-color: #666;
+            --down-icon: url('data:image/svg+xml;utf8,');
+            --hamburger-icon: url('data:image/svg+xml;utf8,');
+            --x-icon: url('data:image/svg+xml;utf8,');
+            --current-color: #0052ea;
+            --menu-color: #677788;
+            --border-color: #f4f4f4;
+            --hover-background-color: #f4f4f4;
+            --menu-background-color: #fff;
+            --submenu-bg-color: #fff;
+            --toggle-color: #f4f4f4;
+            --button-bg-color: #0d6efd;
+            --button-color: #fff;
+            --button-bg-color-hover: #0b5ed7;
+            --button-color-hover: #fff;
+            --button-border-color: #0a58ca;
+            --section-border-color: #ddd;
+            --inline-code-bg-color: #f5f5f5;
+            --inline-code-color: #da1039;
+            --input-bg-color: #fff;
+            --input-color: #212529;
+            --input-border-color: #e3e3e3;
+            --input-border-focus-color: #e3e3e3;
+            --image-filter: grayscale(0%);
+            --themeable-image-filter: none;
+            --svg-color: #323330;
+            --page-nav-bg-color: #fff;
+            --mark-bg-color: #fff6ea;
+            --feature-image-filter: none;
+            --fancy-list-color: rgba(0, 0, 0, .15);
+            --output-bg-color: #f9fafb;
+            --output-border-color: #e7ebed;
+            --post-box-shadow: rgba(50, 50, 93, .25) 0px 2px 5px -1px, rgba(0, 0, 0, .3) 0px 1px 3px -1px;
+            --post-border: none;
+            --scrollbar-bg-color: #282828;
+            --scrollbar-thumb-color: gray
+        }
+
+        .wp-block-image {
+            margin-bottom: 1em
+        }
+
+        .wp-block-image img {
+            max-width: 100%
+        }
+
+        .wp-block-image:not(.is-style-rounded) img {
+            border-radius: inherit
+        }
+
+        .wp-block-image .alignright {
+            display: table
+        }
+
+        .wp-block-image .alignright {
+            float: right;
+            margin: .5em 0 .5em 1em
+        }
+
+        .feature-page {
+            display: flex;
+            align-items: flex-start;
+            padding: 0;
+            margin: 0 0 1rem
+        }
+
+        .feature-page>.feature-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 1rem 0 0;
+            border-radius: 50%;
+            background-color: var(--feature-image-bg-color, "#fff");
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .feature-page>.feature-body {
+            flex: 1
+        }
+
+        .feature-page h3 {
+            margin: 0 0 .5rem
+        }
+
+        html {
+            background: var(--body-bg-color);
+            color: var(--text-color);
+            font-size: 1rem
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: 1rem;
+            line-height: 1.8
+        }
+
+        img {
+            height: auto;
+            max-width: 100%
+        }
+
+        figure {
+            margin: 1em 0
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 400;
+            color: var(--heading-color);
+            padding: 0
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            margin-bottom: 1.7rem
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem
+        }
+
+        h3 {
+            font-size: 1.3125rem;
+            margin-bottom: .875rem
+        }
+
+        .screen-reader-text {
+            border: 0;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: fixed !important;
+            width: 1px;
+            word-wrap: normal !important;
+            outline-style: dashed;
+            outline-width: .125rem;
+            outline-color: var(--text-color)
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none
+        }
+
+        a:visited {
+            color: var(--link-color)
+        }
+
+        ul {
+            padding: 0
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        article {
+            padding: 0 .5rem
+        }
+
+        aside {
+            padding: 1rem .5rem
+        }
+
+        .entry-title {
+            color: var(--title-color);
+            font-weight: 400
+        }
+
+        .widget-title {
+            font-weight: 700;
+            font-size: .8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0 0 1rem;
+            margin: 0
+        }
+
+        .widget_search {
+            margin-bottom: 1.5rem
+        }
+
+        .widget .menu {
+            margin: 0 0 1.5rem
+        }
+
+        .ad {
+            text-align: left;
+            margin: .5rem 0
+        }
+
+        p code {
+            font-family: var(--font-family-code);
+            font-size: .875rem;
+            font-weight: 400;
+            background-color: var(--inline-code-bg-color);
+            color: var(--inline-code-color);
+            padding: .25em .5em .25em;
+            border-radius: 3px
+        }
+
+        .wp-block-code code {
+            white-space: pre !important;
+            font-family: var(--font-family-code)
+        }
+
+        code.hljs {
+            padding: 1rem
+        }
+
+        .ad-300 {
+            width: 300px;
+            height: 280px;
+            overflow: hidden
+        }
+
+        .ad:before {
+            content: "Advertisements";
+            color: var(--ads-label-color);
+            font-size: 10px;
+            display: block;
+            text-transform: uppercase;
+            text-align: center
+        }
+
+        .search-form {
+            overflow: hidden;
+            width: 100%
+        }
+
+        .search-form input[type=search] {
+            border: 1px solid var(--input-border-color);
+            border-radius: 3px;
+            font-size: 1rem;
+            padding: 16px;
+            width: 100%;
+            outline-offset: -2px;
+            outline: 0;
+            background-color: var(--input-bg-color);
+            color: var(--input-color)
+        }
+
+        .search-form input[type=submit] {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .entry-content ul {
+            padding-left: 1rem
+        }
+
+        .entry-content li {
+            margin: 0 0 .5rem 1rem
+        }
+
+        .widget ul {
+            margin: 0;
+            padding: 0
+        }
+
+        .widget li {
+            list-style-type: none;
+            text-align: left;
+            word-wrap: break-word;
+            font-size: 1rem;
+            padding: .25rem 0
+        }
+
+        .widget li:first-child {
+            padding-top: 0
+        }
+
+        .widget li a {
+            display: inline-block;
+            padding: 0 0 .25rem
+        }
+
+        .entry-content .wp-block-group ul {
+            padding-left: 0;
+            list-style: none
+        }
+
+        .entry-content .wp-block-group ul>li:before {
+            content: "";
+            border-color: transparent #ccc;
+            border-style: solid;
+            border-width: .3em 0 .3em .35em;
+            display: block;
+            height: 0;
+            width: 0;
+            left: -.75rem;
+            top: 1.25rem;
+            position: relative;
+            background: 0 0;
+            margin: 0
+        }
+
+        .wp-block-image .alignright {
+            float: right;
+            margin: .5em 0 .5em 1em
+        }
+
+        @media (min-width:768px) {
+            body {
+                font-size: 1rem
+            }
+        }
+
+        @media (min-width:1140px) {
+            body {
+                font-size: 1rem
+            }
+
+            .site {
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden
+            }
+
+            .site-inner {
+                display: flex;
+                justify-content: space-between
+            }
+
+            .site-main {
+                width: 730px
+            }
+
+            aside {
+                width: 300px;
+                padding: 1rem .5rem
+            }
+
+            .wrap {
+                width: 1050px;
+                margin: 0 auto
+            }
+
+            .site-header {
+                background: var(--header-bg-color);
+                width: 100%
+            }
+
+            .header-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center
+            }
+        }
+
+        .wth-title {
+            display: inline-block;
+            margin-right: 1rem
+        }
+
+        .wth-btn {
+            display: inline-block;
+            border: none;
+            outline: 0;
+            padding: 10px 25px;
+            border-radius: 3px;
+            font-size: .9rem
+        }
+
+        .wth-form-wrapper {
+            margin-bottom: 4rem
+        }
+
+        .wth-btn-submit {
+            background: var(--button-bg-color);
+            color: var(--button-color);
+            border: solid 1px var(--button-border-color);
+            margin-top: 10px
+        }
+
+        .wth-btn-cancel {
+            background-color: #fff;
+            border: solid 1px var(--button-bg-color);
+            color: var(--button-bg-color);
+            margin-top: 10px
+        }
+
+        .wth-message {
+            background-color: var(--input-bg-color);
+            border: 1px solid var(--input-border-color);
+            min-height: 150px;
+            width: 96%;
+            padding: 2%;
+            display: block;
+            border-radius: 5px;
+            outline: 0;
+            color: var(--text-color)
+        }
+
+        .wth-form {
+            display: block;
+            text-align: left
+        }
+
+        .wth-form.hidden {
+            display: none
+        }
+
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            padding: .5em;
+            background: #282828
+        }
+
+        .hljs {
+            color: #ebdbb2
+        }
+
+        .hljs-keyword {
+            color: #fb4934
+        }
+
+        .hljs-title {
+            color: #83a598
+        }
+
+        .hljs-meta {
+            color: #fe8019
+        }
+
+        .hljs-class {
+            color: #8ec07c
+        }
+
+        .hljs-comment {
+            color: #928374
+        }
+
+        .hljs-comment {
+            font-style: italic
+        }
+
+        .contact-form {
+            box-sizing: border-box;
+            max-width: 90%;
+            padding: 0 1%;
+            line-height: 1.7
+        }
+
+        @media (min-width:768px) {
+            .contact-form {
+                max-width: 500px;
+                padding: 0 .5rem;
+                line-height: 1.7
+            }
+        }
+
+        .contact-form .form-field {
+            display: block;
+            margin-bottom: .5rem
+        }
+
+        .contact-form label {
+            display: block
+        }
+
+        .contact-form .error {
+            color: red
+        }
+
+        .contact-form input[type=email],
+        .contact-form input[type=text],
+        .contact-form textarea {
+            background-color: var(--input-bg-color);
+            color: var(--input-color);
+            border: 1px solid var(--input-border-color);
+            width: 100%;
+            padding: .75rem;
+            outline: 0
+        }
+
+        .contact-form input[type=submit] {
+            display: inline-block;
+            border: none;
+            outline: 0;
+            padding: 10px 25px;
+            border-radius: 3px;
+            font-size: .9rem;
+            background: var(--button-bg-color);
+            color: var(--button-color);
+            border: solid 1px var(--button-border-color)
+        }
+
+        .contact-form .honeypot {
+            display: none
+        }
+    </style>
+    <link rel="stylesheet" media="print"
+        href="https://www.pythontutorial.net/wp-content/cache/autoptimize/css/autoptimize_740425810c2ee23a720a220facf67877.css"
+        onload="this.onload=null;this.media='all';" /><noscript id="aonoscrcss">
+        <link media="all"
+            href="https://www.pythontutorial.net/wp-content/cache/autoptimize/css/autoptimize_740425810c2ee23a720a220facf67877.css"
+            rel="stylesheet" />
+    </noscript>
+    <title>Python Tutorial</title>
+    <meta name="description"
+        content="This Python Tutorial helps you learn Python programming from scratch. If you want to master Python fast, this tutorial is a good start." />
+    <link rel="canonical" href="https://www.pythontutorial.net/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Python Tutorial" />
+    <meta property="og:description"
+        content="This Python Tutorial helps you learn Python programming from scratch. If you want to master Python fast, this tutorial is a good start." />
+    <meta property="og:url" content="https://www.pythontutorial.net/" />
+    <meta property="og:site_name" content="Python Tutorial - Master Python Programming For Beginners from Scratch" />
+    <meta property="article:modified_time" content="2021-12-05T09:14:14+00:00" />
+    <meta property="og:image" content="https://www.pythontutorial.net/wp-content/uploads/2020/10/python-tutorial.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:label1" content="Est. reading time" />
+    <meta name="twitter:data1" content="1 minute" />
+    <script type="application/ld+json"
+        class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.pythontutorial.net/#organization","name":"Python Tutorial","url":"https://www.pythontutorial.net/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://www.pythontutorial.net/#logo","inLanguage":"en-US","url":"https://www.pythontutorial.net/wp-content/uploads/2020/09/favicon.png","contentUrl":"https://www.pythontutorial.net/wp-content/uploads/2020/09/favicon.png","width":512,"height":512,"caption":"Python Tutorial"},"image":{"@id":"https://www.pythontutorial.net/#logo"}},{"@type":"WebSite","@id":"https://www.pythontutorial.net/#website","url":"https://www.pythontutorial.net/","name":"Python Tutorial - Master Python Programming For Beginners from Scratch","description":"Master Python Programming For Beginners from Scratch","publisher":{"@id":"https://www.pythontutorial.net/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.pythontutorial.net/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.pythontutorial.net/#primaryimage","inLanguage":"en-US","url":"https://www.pythontutorial.net/wp-content/uploads/2020/10/python-tutorial.png","contentUrl":"https://www.pythontutorial.net/wp-content/uploads/2020/10/python-tutorial.png","width":300,"height":300},{"@type":"WebPage","@id":"https://www.pythontutorial.net/#webpage","url":"https://www.pythontutorial.net/","name":"Python Tutorial","isPartOf":{"@id":"https://www.pythontutorial.net/#website"},"about":{"@id":"https://www.pythontutorial.net/#organization"},"primaryImageOfPage":{"@id":"https://www.pythontutorial.net/#primaryimage"},"datePublished":"2020-08-31T23:46:29+00:00","dateModified":"2021-12-05T09:14:14+00:00","description":"This Python Tutorial helps you learn Python programming from scratch. If you want to master Python fast, this tutorial is a good start.","breadcrumb":{"@id":"https://www.pythontutorial.net/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.pythontutorial.net/"]}]},{"@type":"BreadcrumbList","@id":"https://www.pythontutorial.net/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]}]}</script>
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <style id='global-styles-inline-css' type='text/css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+    </style>
+    <link rel="https://api.w.org/" href="https://www.pythontutorial.net/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://www.pythontutorial.net/wp-json/wp/v2/pages/10" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.pythontutorial.net/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+        href="https://www.pythontutorial.net/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.9.2" />
+    <link rel='shortlink' href='https://www.pythontutorial.net/' />
+    <link rel="alternate" type="application/json+oembed"
+        href="https://www.pythontutorial.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pythontutorial.net%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="https://www.pythontutorial.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pythontutorial.net%2F&#038;format=xml" />
+    <style>
+        html {
+            --logo-url: url("https://www.pythontutorial.net/wp-content/uploads/2021/03/python-tutorial.svg");
+            --logo-width: 95px;
+            --logo-height: 40px;
+            --icon-copy-url: url("https://www.pythontutorial.net/wp-content/themes/evolution/img/copy-light.svg");
+            --icon-check-url: url("https://www.pythontutorial.net/wp-content/themes/evolution/img/check-light.svg");
+            --feature-image-bg-color: #ffd141
+        }
+
+        html[data-theme="dark"] {
+            --logo-url: url("https://www.pythontutorial.net/wp-content/uploads/2021/03/python-tutorial-dark.svg");
+            --logo-width: 95px;
+            --logo-height: 40px
+        }
+
+        html[data-theme="dark"] {
+            color-scheme: dark;
+            --body-bg-color: #171717;
+            --text-color: #e3e3e3;
+            --primary-color: #4db2ff;
+            --header-bg-color: #171717;
+            --header-border-color: #454545;
+            --heading-color: #e3e3e3;
+            --link-color: #4db2ff;
+            --link-color-hover: #0091ff;
+            --title-color: #e3e3e3;
+            --list-item-color: #e3e3e3;
+            --badge-bg-color: #e3e3e3;
+            --badge-color: #323330;
+            --code-badge-color: #fff;
+            --footer-bg-color: #2e2e2e;
+            --footer-color: #e3e3e3;
+            --footer-link-color: #e3e3e3;
+            --footer-link-color-hover: #c7c7c7;
+            --ads-label-color: #e3e3e3;
+            --down-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+            --hamburger-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>');
+            --x-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white"  viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>');
+            --current-color: #e3e3e3;
+            --menu-color: #e3e3e3;
+            --border-color: #454545;
+            --hover-background-color: #242424;
+            --menu-background-color: #171717;
+            --submenu-bg-color: #2e2e2e;
+            --toggle-color: #242424;
+            --button-bg-color: #282828;
+            --button-color: #e3e3e3;
+            --button-bg-color-hover: #323330;
+            --button-color-hover: #e3e3e3;
+            --button-border-color: #282828;
+            --section-border-color: #454545;
+            --inline-code-bg-color: #454545;
+            --inline-code-color: #e3e3e3;
+            --input-bg-color: #2e2e2e;
+            --input-color: #e3e3e3;
+            --input-border-color: #e3e3e3;
+            --input-border-focus-color: #4db2ff;
+            --image-filter: grayscale(50%);
+            --themeable-image-filter: invert(1) sepia(0) saturate(1) hue-rotate(0deg);
+            --svg-color: #f4f4f4;
+            --page-nav-bg-color: inherit;
+            --mark-bg-color: #454545;
+            --feature-image-bg-color: #282828;
+            --feature-image-filter: grayscale(50%);
+            --fancy-list-color: #e3e3e3;
+            --output-bg-color: #2e2e2e;
+            --output-border-color: #2e2e2e
+        }
+    </style>
+    <style media="print">
+        .site-main:before {
+            content: url("https://www.pythontutorial.net/wp-content/uploads/2021/03/python-tutorial.svg");
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            max-width: 200px
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXTH3J6K5R"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RXTH3J6K5R');</script>
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script async src="//increaserev.com/ads/dfpres/mcm.js"></script>
+    <script>var IR_Tag = "c_b";</script>
+    <link rel="icon" href="https://www.pythontutorial.net/wp-content/uploads/2020/09/cropped-favicon-32x32.png"
+        sizes="32x32" />
+    <link rel="icon" href="https://www.pythontutorial.net/wp-content/uploads/2020/09/cropped-favicon-192x192.png"
+        sizes="192x192" />
+    <link rel="apple-touch-icon"
+        href="https://www.pythontutorial.net/wp-content/uploads/2020/09/cropped-favicon-180x180.png" />
+    <meta name="msapplication-TileImage"
+        content="https://www.pythontutorial.net/wp-content/uploads/2020/09/cropped-favicon-270x270.png" />
+</head>
+
+<body class="home page-template-default page page-id-10"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0"
+        width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg>
+    <div id="page" class="site"> <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+        <header id="masthead" class="site-header">
+            <div class="wrap header-wrapper">
+                <div class="site-branding"> <a href="https://www.pythontutorial.net" rel="home" aria-current="page"
+                        class="logo" aria-label="Go to the homepage"> </a></div>
+                <nav id="site-navigation" class="site-navigation">
+                    <ul id="primary-menu" class="site-menu">
+                        <li id="menu-item-36"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item menu-item-36">
+                            <a href="/main" aria-current="page">Home</a></li>
+                        <li id="menu-item-41"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a
+                                href="https://www.pythontutorial.net/getting-started/">Getting Started</a></li>
+                        <li id="menu-item-42"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a
+                                href="https://www.pythontutorial.net/python-basics/">Basics</a></li>
+                        <li id="menu-item-464"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a
+                                href="https://www.pythontutorial.net/python-oop/">OOP</a></li>
+                        <li id="menu-item-846"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-846"><a
+                                href="https://www.pythontutorial.net/advanced-python/">Advanced Python</a></li>
+                        <li id="menu-item-3215"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3215"><a
+                                href="https://www.pythontutorial.net/python-regex/">Regex</a></li>
+                        <li id="menu-item-1320"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1320"><a
+                                href="https://www.pythontutorial.net/tkinter/">Tkinter</a></li>
+                    </ul> <a aria-label="Change Theme" class="switch-theme"> <svg class="dark-mode-icon" role="img"
+                            width="1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <title>Dark Mode</title>
+                            <path fill="currentColor"
+                                d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z">
+                            </path>
+                        </svg> <svg class="light-mode-icon" role="img" width="1rem" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <title>Light Mode</title>
+                            <path fill="currentColor"
+                                d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z">
+                            </path>
+                        </svg> </a> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
+                        aria-label="Primary Menu"></button>
+                </nav>
+            </div>
+        </header>
+        <div class="site-inner wrap">
+            <main id="primary" class="site-main">
+                <article id="post-10" class="post-10 page type-page status-publish hentry">
+                    <header class="entry-header">
+                        <h1 class="entry-title">Python Tutorial</h1>
+                    </header>
+                    <div class="entry-content">
+                        <p>This Python tutorial helps you learn Python programming from scratch.</p>
+                        <div class="wp-block-image">
+                            <figure class="alignright size-large is-resized"><noscript><img
+                                        src="https://www.pythontutorial.net/wp-content/uploads/2020/10/python-tutorial.png"
+                                        alt="Python Tutorial" class="wp-image-262" width="150" height="150"
+                                        srcset="https://www.pythontutorial.net/wp-content/uploads/2020/10/python-tutorial.png 300w, https://www.pythontutorial.net/wp-content/uploads/2020/10/python-tutorial-150x150.png 150w"
+                                        sizes="(max-width: 150px) 100vw, 150px" /></noscript><img
+                                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E'
+                                    data-src="https://www.pythontutorial.net/wp-content/uploads/2020/10/python-tutorial.png"
+                                    alt="Python Tutorial" class="lazyload wp-image-262" width="150" height="150"
+                                    data-srcset="https://www.pythontutorial.net/wp-content/uploads/2020/10/python-tutorial.png 300w, https://www.pythontutorial.net/wp-content/uploads/2020/10/python-tutorial-150x150.png 150w"
+                                    data-sizes="(max-width: 150px) 100vw, 150px" /></figure>
+                        </div>
+                        <p>If you want to master Python programming quickly, this Python tutorial is for you.</p>
+                        <p>The tutorial will take you through the understanding of the Python programming language, help
+                            you deeply learn the concepts, and show you how to apply practical programming techniques to
+                            your specific challenges.</p>
+                        <p>What you&#8217;ll learn:</p>
+                        <ul>
+                            <li>Gain basic Python programming concepts.</li>
+                            <li>How to develop real-world Python applications.</li>
+                            <li>Apply Python programming techniques in specific fields such as Data Science, Machine
+                                Learning, and AI.</li>
+                        </ul>
+                        <section class="feature-pages">
+                            <article class="feature-page">
+                                <div class="feature-image"><noscript><img
+                                            src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Getting-Started-with-Python-Programming.svg"
+                                            width="90" height="90" alt=""></noscript><img class="lazyload"
+                                        src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%2090%22%3E%3C/svg%3E'
+                                        data-src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Getting-Started-with-Python-Programming.svg"
+                                        width="90" height="90" alt=""></div>
+                                <div class="feature-body">
+                                    <h2> <a href="https://www.pythontutorial.net/getting-started/">Getting Started with
+                                            Python Programming</a></h2>
+                                    <div>This section helps you get started with Python programming quickly and
+                                        effectively. After completing this section, you'll have a basic understanding of
+                                        the Python language. And you'll know how to set up the Python development
+                                        environment on your computer.</div>
+                                </div>
+                            </article>
+                            <article class="feature-page">
+                                <div class="feature-image"><noscript><img
+                                            src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Python-Basics.svg"
+                                            width="90" height="90" alt=""></noscript><img class="lazyload"
+                                        src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%2090%22%3E%3C/svg%3E'
+                                        data-src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Python-Basics.svg"
+                                        width="90" height="90" alt=""></div>
+                                <div class="feature-body">
+                                    <h2> <a href="https://www.pythontutorial.net/python-basics/">Python Basics</a></h2>
+                                    <div>In this section, you'll learn the basic Python programming. If you're
+                                        completely new to Python programming, this section is perfect for you. After
+                                        completing the tutorials, you'll be familiar with the basic Python programming.
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="feature-page">
+                                <div class="feature-image"><noscript><img
+                                            src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Python-OOP.svg"
+                                            width="90" height="90" alt=""></noscript><img class="lazyload"
+                                        src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%2090%22%3E%3C/svg%3E'
+                                        data-src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Python-OOP.svg"
+                                        width="90" height="90" alt=""></div>
+                                <div class="feature-body">
+                                    <h2> <a href="https://www.pythontutorial.net/python-oop/">Python OOP</a></h2>
+                                    <div>This Python OOP explains to you the Python object-oriented programming clearly
+                                        so that you can apply it to develop software more effectively.</div>
+                                </div>
+                            </article>
+                            <article class="feature-page">
+                                <div class="feature-image"><noscript><img
+                                            src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Advanced-Python.svg"
+                                            width="90" height="90" alt=""></noscript><img class="lazyload"
+                                        src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%2090%22%3E%3C/svg%3E'
+                                        data-src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Advanced-Python.svg"
+                                        width="90" height="90" alt=""></div>
+                                <div class="feature-body">
+                                    <h2> <a href="https://www.pythontutorial.net/advanced-python/">Advanced Python</a>
+                                    </h2>
+                                    <div>This section covers the advanced Python concepts so that you understand how and
+                                        why things works in Python.</div>
+                                </div>
+                            </article>
+                            <article class="feature-page">
+                                <div class="feature-image"><noscript><img
+                                            src="https://www.pythontutorial.net/wp-content/uploads/2021/12/python-regex.svg"
+                                            width="90" height="90" alt=""></noscript><img class="lazyload"
+                                        src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%2090%22%3E%3C/svg%3E'
+                                        data-src="https://www.pythontutorial.net/wp-content/uploads/2021/12/python-regex.svg"
+                                        width="90" height="90" alt=""></div>
+                                <div class="feature-body">
+                                    <h2> <a href="https://www.pythontutorial.net/python-regex/">Python Regex</a></h2>
+                                    <div>In this section, you'll learn about regular expressions in Python step by step
+                                        from scratch.</div>
+                                </div>
+                            </article>
+                            <article class="feature-page">
+                                <div class="feature-image"><noscript><img
+                                            src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Tkinter.svg"
+                                            width="90" height="90" alt=""></noscript><img class="lazyload"
+                                        src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%2090%22%3E%3C/svg%3E'
+                                        data-src="https://www.pythontutorial.net/wp-content/uploads/2021/03/Tkinter.svg"
+                                        width="90" height="90" alt=""></div>
+                                <div class="feature-body">
+                                    <h2> <a href="https://www.pythontutorial.net/tkinter/">Tkinter</a></h2>
+                                    <div>This Tkinter tutorial introduces you to the exciting world of GUI programming
+                                        in Python.</div>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </article>
+            </main>
+            <aside id="secondary" class="widget-area">
+                <section id="textblockswidget-3" class="widget widget_textblockswidget">
+                    <div class="text-block sidebar-top-increv">
+                        <div class="ad ad-300">
+                            <div class="increaserev mcm300x250"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="search-2" class="widget widget_search">
+                    <form role="search" method="get" class="search-form" action="https://www.pythontutorial.net/">
+                        <label> <span class="screen-reader-text">Search for:</span> <input type="search"
+                                class="search-field" placeholder="Search &hellip;" value="" name="s" /> </label> <input
+                            type="submit" class="search-submit" value="Search" /></form>
+                </section>
+                <section id="nav_menu-3" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Getting Started</h2>
+                    <div class="menu-getting-started-container">
+                        <ul id="menu-getting-started" class="menu">
+                            <li id="menu-item-70"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70"><a
+                                    href="https://www.pythontutorial.net/getting-started/what-is-python/">What is
+                                    Python</a></li>
+                            <li id="menu-item-69"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a
+                                    href="https://www.pythontutorial.net/getting-started/install-python/">Install
+                                    Python</a></li>
+                            <li id="menu-item-128"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a
+                                    href="https://www.pythontutorial.net/getting-started/setup-visual-studio-code-for-python/">Setup
+                                    VS Code for Python</a></li>
+                            <li id="menu-item-103"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a
+                                    href="https://www.pythontutorial.net/getting-started/python-hello-world/">Develop
+                                    Python Hello World Program</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-4" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Python Fundamentals</h2>
+                    <div class="menu-syntax-variables-primitive-types-container">
+                        <ul id="menu-syntax-variables-primitive-types" class="menu">
+                            <li id="menu-item-175"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-175"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-syntax/">Python Syntax</a>
+                            </li>
+                            <li id="menu-item-176"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-variables/">Variables</a>
+                            </li>
+                            <li id="menu-item-174"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-string/">Strings</a></li>
+                            <li id="menu-item-173"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-numbers/">Numbers</a></li>
+                            <li id="menu-item-171"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-boolean/">Boolean</a></li>
+                            <li id="menu-item-172"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-constants/">Constants</a>
+                            </li>
+                            <li id="menu-item-177"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-comments/">Comments</a>
+                            </li>
+                            <li id="menu-item-170"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-type-conversion/">Type
+                                    Conversion</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-5" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Control Flow</h2>
+                    <div class="menu-control-flow-container">
+                        <ul id="menu-control-flow" class="menu">
+                            <li id="menu-item-180"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-if/">if&#8230;else</a>
+                            </li>
+                            <li id="menu-item-204"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-ternary-operator/">Ternary
+                                    Operator</a></li>
+                            <li id="menu-item-179"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-for-range/">for Loop</a>
+                            </li>
+                            <li id="menu-item-178"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-while/">while Loop</a>
+                            </li>
+                            <li id="menu-item-285"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-285"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-break/">break</a></li>
+                            <li id="menu-item-284"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-284"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-continue/">continue</a>
+                            </li>
+                            <li id="menu-item-867"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-867"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-pass/">pass</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-6" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Functions</h2>
+                    <div class="menu-functions-container">
+                        <ul id="menu-functions" class="menu">
+                            <li id="menu-item-274"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-functions/">Python
+                                    Functions</a></li>
+                            <li id="menu-item-273"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-default-parameters/">Default
+                                    Parameters</a></li>
+                            <li id="menu-item-498"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-498"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-keyword-arguments/">Keyword
+                                    Arguments</a></li>
+                            <li id="menu-item-272"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-recursive-functions/">Recursive
+                                    Functions</a></li>
+                            <li id="menu-item-499"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-499"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-lambda-expressions/">Lambda
+                                    Expressions</a></li>
+                            <li id="menu-item-1040"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1040"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-function-docstrings/">Function
+                                    Docstrings</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-7" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Python List</h2>
+                    <div class="menu-basics-list-container">
+                        <ul id="menu-basics-list" class="menu">
+                            <li id="menu-item-275"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-list/">List</a></li>
+                            <li id="menu-item-276"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-tuples/">Tuple</a></li>
+                            <li id="menu-item-306"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-sort-list/">Sorting a List
+                                    in Place: sort()</a></li>
+                            <li id="menu-item-305"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-sorted/">Sorting a List:
+                                    sorted()</a></li>
+                            <li id="menu-item-304"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-list-slice/">Slicing a
+                                    List: [::]</a></li>
+                            <li id="menu-item-334"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-unpack-list/">Unpacking a
+                                    List</a></li>
+                            <li id="menu-item-333"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-for-loop-list/">Iterating
+                                    over a List: for loop</a></li>
+                            <li id="menu-item-351"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-find-index-of-element-in-list/">Finding
+                                    Index of an Element: index()</a></li>
+                            <li id="menu-item-594"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-594"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-iterables/">Iterables</a>
+                            </li>
+                            <li id="menu-item-387"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-map-list/">Transform List
+                                    Elements: map()</a></li>
+                            <li id="menu-item-386"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-filter-list/">Filtering
+                                    List Elements: filter()</a></li>
+                            <li id="menu-item-385"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-385"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-reduce-list/">Reducing
+                                    List Elements: reduce()</a></li>
+                            <li id="menu-item-414"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-414"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-list-comprehensions/">List
+                                    Comprehensions</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="textblockswidget-4" class="widget widget_textblockswidget">
+                    <div class="text-block sidebar-middle">
+                        <div class="ad ad-300">
+                            <div id="Ad.Plus-300x250-2">
+                                <script>window.googletag = window.googletag || { cmd: [] }; googletag.cmd.push(function () {
+                                        googletag.defineSlot('/21849154601,22306944310/Ad.Plus-300x250', [[300, 250], [250, 250], [200, 200]],
+                                            'Ad.Plus-300x250-2').addService(googletag.pubads())
+                                            .setTargeting('site', ['pythontutorial.net']);
+                                        googletag.enableServices(); googletag.display('Ad.Plus-300x250-2');
+                                    });</script>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="nav_menu-8" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Python Dictionary</h2>
+                    <div class="menu-basics-dictionary-container">
+                        <ul id="menu-basics-dictionary" class="menu">
+                            <li id="menu-item-277"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-dictionary/">Dictionary</a>
+                            </li>
+                            <li id="menu-item-589"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-dictionary-comprehension/">Dictionary
+                                    Comprehension</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-11" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Python Set</h2>
+                    <div class="menu-basics-set-container">
+                        <ul id="menu-basics-set" class="menu">
+                            <li id="menu-item-595"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-595"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-set/">Set</a></li>
+                            <li id="menu-item-634"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-set-comprehension/">Set
+                                    Comprehension</a></li>
+                            <li id="menu-item-601"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-set-union/">Union of
+                                    Sets</a></li>
+                            <li id="menu-item-609"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-609"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-set-intersection/">Intersection
+                                    of Sets</a></li>
+                            <li id="menu-item-618"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-618"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-set-difference/">Difference
+                                    between Sets</a></li>
+                            <li id="menu-item-625"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-625"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-symmetric-difference/">Symmetric
+                                    Difference of Sets</a></li>
+                            <li id="menu-item-659"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-659"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-issubset/">Subset</a></li>
+                            <li id="menu-item-658"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-658"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-issuperset/">Superset</a>
+                            </li>
+                            <li id="menu-item-657"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-disjoint-sets/">Disjoint
+                                    Sets</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-15" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Exception Handling</h2>
+                    <div class="menu-basic-exception-handling-container">
+                        <ul id="menu-basic-exception-handling" class="menu">
+                            <li id="menu-item-898"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-898"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-try-except/">try…except</a>
+                            </li>
+                            <li id="menu-item-897"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-897"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-try-except-finally/">try…except…finally</a>
+                            </li>
+                            <li id="menu-item-896"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-896"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-try-except-else/">try…except…else</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-13" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Python Loop with Else Clause</h2>
+                    <div class="menu-basic-more-on-loops-container">
+                        <ul id="menu-basic-more-on-loops" class="menu">
+                            <li id="menu-item-731"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-for-else/">for&#8230;else</a>
+                            </li>
+                            <li id="menu-item-730"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-while-else/">while&#8230;else</a>
+                            </li>
+                            <li id="menu-item-741"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-do-while/">do…while
+                                    Emulation</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-9" class="widget widget_nav_menu">
+                    <h2 class="widget-title">More on Functions</h2>
+                    <div class="menu-basics-more-functions-container">
+                        <ul id="menu-basics-more-functions" class="menu">
+                            <li id="menu-item-1039"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1039"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-unpacking-tuple/">Unpacking
+                                    Tuples</a></li>
+                            <li id="menu-item-525"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-525"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-args/">The *args
+                                    Parameters</a></li>
+                            <li id="menu-item-526"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-kwargs/">The **kwargs
+                                    Parameters</a></li>
+                            <li id="menu-item-1072"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1072"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-partial-functions/">Partial
+                                    Functions</a></li>
+                            <li id="menu-item-2820"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2820"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-type-hints/">Type
+                                    Hints</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-10" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Modules</h2>
+                    <div class="menu-basics-modules-container">
+                        <ul id="menu-basics-modules" class="menu">
+                            <li id="menu-item-527"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-module/">Modules</a></li>
+                            <li id="menu-item-1073"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1073"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-module-search-path/">Module
+                                    Search Path</a></li>
+                            <li id="menu-item-1074"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1074"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-__name__/">Python
+                                    __name__</a></li>
+                            <li id="menu-item-536"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-536"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-packages/">Packages</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-14" class="widget widget_nav_menu">
+                    <h2 class="widget-title">File I/O</h2>
+                    <div class="menu-basic-file-i-o-container">
+                        <ul id="menu-basic-file-i-o" class="menu">
+                            <li id="menu-item-735"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-735"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-read-text-file/">Reading a
+                                    Text File</a></li>
+                            <li id="menu-item-734"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-write-text-file/">Writing
+                                    to a Text File</a></li>
+                            <li id="menu-item-733"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-733"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-create-text-file/">Creating
+                                    a Text File</a></li>
+                            <li id="menu-item-732"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-732"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-check-if-file-exists/">Checking
+                                    If a File Exists</a></li>
+                            <li id="menu-item-772"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-772"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-read-csv-file/">Reading
+                                    from a CSV File</a></li>
+                            <li id="menu-item-771"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-write-csv-file/">Writing
+                                    to a CSV File</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="nav_menu-12" class="widget widget_nav_menu">
+                    <h2 class="widget-title">Managing Third-party Packages</h2>
+                    <div class="menu-basics-third-party-packages-container">
+                        <ul id="menu-basics-third-party-packages" class="menu">
+                            <li id="menu-item-688"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-688"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-pip/">Python Package Index
+                                    (PyPI) &#038; PIP</a></li>
+                            <li id="menu-item-687"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-687"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-virtual-environments/">Python
+                                    Virtual Environments</a></li>
+                            <li id="menu-item-690"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-690"><a
+                                    href="https://www.pythontutorial.net/python-basics/install-pipenv-windows/">Install
+                                    pipenv on Windows</a></li>
+                            <li id="menu-item-689"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-689"><a
+                                    href="https://www.pythontutorial.net/python-basics/python-pipenv/">Using pipenv
+                                    Tool</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="textblockswidget-2" class="widget widget_textblockswidget">
+                    <div class="text-block sidebar-bottom">
+                        <div class="ad ad-300">
+                            <div id="Ad.Plus-300x250-3">
+                                <script>window.googletag = window.googletag || { cmd: [] }; googletag.cmd.push(function () {
+                                        googletag.defineSlot('/21849154601,22306944310/Ad.Plus-300x250', [[300, 250], [250, 250], [200, 200]],
+                                            'Ad.Plus-300x250-3').addService(googletag.pubads())
+                                            .setTargeting('site', ['pythontutorial.net']);
+                                        googletag.enableServices(); googletag.display('Ad.Plus-300x250-3');
+                                    });</script>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+        <footer id="colophon" class="site-footer">
+            <div class="wrap">
+                <div class="site-footer-widgets">
+                    <div class="site-footer-sidebar widget">
+                        <h2 class="widget-title">About pythontutorial.net</h2>
+                        <div class="textwidget custom-html-widget">Pythontutorial.net helps you master Python
+                            programming from scratch fast.</div>
+                        <h2 class="widget-title">Site Links</h2>
+                        <div class="menu-site-links-container">
+                            <ul id="menu-site-links" class="menu">
+                                <li id="menu-item-3459"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3459"><a
+                                        target="_blank" rel="noopener"
+                                        href="https://www.pythontutorial.net/donation/">Donation ❤️</a></li>
+                                <li id="menu-item-21"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item menu-item-21">
+                                    <a href="https://www.pythontutorial.net/" aria-current="page">Home</a></li>
+                                <li id="menu-item-20"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
+                                        href="https://www.pythontutorial.net/contact/">Contact</a></li>
+                                <li id="menu-item-19"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+                                        href="https://www.pythontutorial.net/about/">About</a></li>
+                                <li id="menu-item-22"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22">
+                                    <a href="https://www.pythontutorial.net/privacy-policy/">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="site-footer-sidebar widget">
+                        <h2 class="widget-title">Recent Python Tutorials</h2>
+                        <ul>
+                            <li><a href="https://www.pythontutorial.net/python-numpy/what-is-numpy/"
+                                    title="What is NumPy">What is NumPy</a></li>
+                            <li><a href="https://www.pythontutorial.net/python-numpy/" title="Python NumPy">Python
+                                    NumPy</a></li>
+                            <li><a href="https://www.pythontutorial.net/python-regex/python-regex-non-capturing-group/"
+                                    title="Python Regex Non-capturing Group">Python Regex Non-capturing Group</a></li>
+                            <li><a href="https://www.pythontutorial.net/python-regex/python-regex-cheat-sheet/"
+                                    title="Python Regex Cheat Sheet">Python Regex Cheat Sheet</a></li>
+                            <li><a href="https://www.pythontutorial.net/python-regex/python-regex-flags/"
+                                    title="Python Regex Flags">Python Regex Flags</a></li>
+                        </ul>
+                    </div>
+                    <div class="site-footer-sidebar widget">
+                        <h2 class="widget-title">Python References</h2>
+                        <div class="menu-python-references-container">
+                            <ul id="menu-python-references" class="menu">
+                                <li id="menu-item-1949"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1949"><a
+                                        href="https://www.pythontutorial.net/python-string-methods/">Python String
+                                        Methods</a></li>
+                                <li id="menu-item-1950"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1950"><a
+                                        target="_blank" rel="noopener"
+                                        href="https://www.mysqltutorial.org/python-mysql/">Python MySQL</a></li>
+                                <li id="menu-item-1951"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1951"><a
+                                        target="_blank" rel="noopener"
+                                        href="https://www.postgresqltutorial.com/postgresql-python/">Python
+                                        PostgreSQL</a></li>
+                                <li id="menu-item-1952"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1952"><a
+                                        target="_blank" rel="noopener"
+                                        href="https://www.oracletutorial.com/python-oracle/">Python Oracle</a></li>
+                                <li id="menu-item-1953"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1953"><a
+                                        target="_blank" rel="noopener"
+                                        href="https://www.sqlitetutorial.net/sqlite-python/">Python SQLite</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-info">
+                    <div class="textwidget custom-html-widget">
+                        <p>Copyright &copy; 2022 · By pythontutorial.net. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div> <noscript>
+        <style>
+            .lazyload {
+                display: none;
+            }
+        </style>
+    </noscript>
+    <script
+        data-noptimize="1">window.lazySizesConfig = window.lazySizesConfig || {}; window.lazySizesConfig.loadMode = 1;</script>
+    <script async data-noptimize="1"
+        src='https://www.pythontutorial.net/wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js?ao_version=2.9.5.1'></script>
+    <script
+        id='adblock-lib-js-extra'>var adsOptions = [{ "selector": ".whitelist", "code": "<div class=\"donation\">\r\n<div class=\"donation-text\">If this Python Tutorial saves you hours of work, please <span class=\"highlight\">whitelist it in your ad blocker <\/span> \ud83d\ude2d and <\/div>\r\n<div> <a target=\"_blank\"  class=\"donate-button\"\r\nhref=\"https:\/\/www.pythontutorial.net\/donation\/\">Donate Now<\/a><\/div>\r\n<div class=\"donation-text\">to help us \u2764\ufe0f pay for the web hosting fee and CDN to keep the website running.<\/div>\r\n<\/a>" }];</script>
+    <script
+        id='wth-frontend-js-extra'>var wth_js_lang = { "ajax_url": "https:\/\/www.pythontutorial.net\/wp-admin\/admin-ajax.php", "nonce": "c4d5e9a2d4", "confirm": "Are you sure to delete item?", "positive_feedback": null, "positive_feedback_option": "feedback_messege", "positive_feedback_required": null, "negative_feedback": "true", "negative_feedback_required": "true", "wth_title_nothank": "What was wrong? Please help us.", "wth_title_yesthank": "Well Done! Please leave your positive feedback.", "wth_thank_you": "Thank You for your feedback.", "submit_text": "Submit", "wth_ga_enable": "", "wth_ga_category": "Was This Helpful?", "wth_ga_positive": "Positive Reviews", "wth_ga_negative": "Negative Reviews", "wth_share_ask": "Awesome, share it:", "wth_fb_share": "Share", "wth_twitter_share": "Tweet" };</script>
+    <script defer
+        src="https://www.pythontutorial.net/wp-content/cache/autoptimize/js/autoptimize_2caeb7b8314eb8f6068eda8c3045d9b8.js"></script>
+</body>
+
+</html>
